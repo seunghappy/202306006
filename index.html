@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>밀턴 글레이저</title>
+</head>
+<style>
+*{margin: 0;}
+    .wrap{
+        position: absolute;
+        width: 50vw;
+        height: 50vw;
+        overflow: hidden;
+    }
+    .dim{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+    }
+    .tit{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: white;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 25%;
+        top: 10%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .tit2{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: white;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 38%;
+        top: 10%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit3{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: white;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit4{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: white;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 63%;
+        top: 10%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit5{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: white;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 76%;
+        top: 10%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+        
+    .box1{
+        position: absolute;
+        left: 65%;
+        height: 0%;
+        top: -4%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box2{
+        position: absolute;
+        left: 64%;
+        height: 0%;
+        top: 5%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+
+
+    .bt a{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px;
+        padding: 10px 0px;
+        color: white;
+        border-radius: 80px;
+        border: 2px solid white;
+        text-decoration: none;
+        font-size: 1.5em; 
+        text-align: center;
+        bottom: 5vh;
+        left: 90%;
+        transform: translateX(-50%);
+    }
+    .bt a:hover{
+        background-color: rgb(36, 36, 36);
+        filter: drop-shadow(0px 0px 10px white)
+    }
+
+    .cont1{
+        font-family: 'Noto Sans KR', Sans-serif;
+        font-size: 40px;
+        padding-left: 310px;
+        padding-top: 810px;
+
+    }
+
+    .cont2{
+        height: 30px;
+        width: 20x;
+
+
+    }
+
+    .tit6{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 25%;
+        top: 115%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .tit7{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 38%;
+        top: 115%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit8{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: white;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 50%;
+        top: 115%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit9{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 63%;
+        top: 115%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit10{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 76%;
+        top: 115%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit11{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 140%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit12{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 146%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box2{
+        position: absolute;
+        left: 25%;
+        height: 0%;
+        top: 116%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box3{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 170%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit13{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1.2em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 260%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit14{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1.0em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 39.5%;
+        top: 265%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit15{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1.0em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 49.7%;
+        top: 270%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit16{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1.0em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 45%;
+        top: 275%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit17{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1.0em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 44%;
+        top: 280%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit18{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1.0em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 48.5%;
+        top: 285%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .box4{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 320%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box5{
+        position: absolute;
+        left: 52.6%;
+        height: 0%;
+        top: 370%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box6{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 420%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box7{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 470%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box8{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 560%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit19{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 25%;
+        top: 600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit20{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 38%;
+        top: 600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit21{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit22{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 63%;
+        top: 600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit23{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 76%;
+        top: 600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit24{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 38%;
+        top: 602%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit25{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 627%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit26{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 633%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box9{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 658%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box10{
+        position: absolute;
+        left: 43%;
+        height: 0%;
+        top: 715%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box11{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 750%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box12{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 817%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box13{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 900%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box14{
+        position: absolute;
+        left: 49%;
+        height: 0%;
+        top: 965%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .box15{
+        position: absolute;
+        left: 50%;
+        height: 0%;
+        top: 1040%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit27{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 25%;
+        top: 1075%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit28{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 38%;
+        top: 1075%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit29{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1075%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit30{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 63%;
+        top: 1075%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit31{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 76%;
+        top: 1075%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit32{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 63%;
+        top: 1077%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit33{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1104%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit34{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1110%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit35{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1155%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit36{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1250%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit37{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1345%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit38{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1470%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit39{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1570%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit40{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 25%;
+        top: 1600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit41{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 38%;
+        top: 1600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit42{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit43{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 63%;
+        top: 1600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit44{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 76%;
+        top: 1600%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit45{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: gray;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1685%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit46{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 1em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1626%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit47{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1632%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit48{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 50%;
+        top: 1870%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit49{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 50%;
+        top: 2030%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .tit50{
+        position: absolute;
+        font-family: 'Noto Sans KR', Sans-serif;
+        width: 200px
+        border-right: 1px solid white;
+        color: black;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        text-align: center;
+        padding: 20px 0px;
+        left: 50%;
+        top: 2065%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+</style>
+<body>
+    <div class="wrap">
+         <video autoplay loop muted>
+             <source src="video/newyork.mp4"></source>
+         </video>
+    </div>
+    <div class="dim"></div>
+    <div class="tit">디자이너 소개</div>
+    <div class="tit2">작품</div>
+    <div class="tit3"><img src="img/아이러브뉴욕로고.png" alt="로고 라인"></div>
+    <div class="tit4">가치관</div>
+    <div class="tit5">인터뷰 내용</div>
+    <div class="box1"><img src="img/메인화면 밀턴글레이저 중앙.png" alt="메인화면 밀턴글레이저"></div>
+    <div class="tit6">♥디자이너 소개</div>
+    <div class="tit7">작품</div>
+    <div class="tit8"><img src="img/아이러브뉴욕 로고2.png" alt="로고 라인2"></div>
+    <div class="tit9">가치관</div>
+    <div class="tit10">인터뷰 내용</div>
+    <div class="tit11">밀턴 글레이저,</div>
+    <div class="tit12">그는 누구인가</div>
+    <div class="box3"><img src="img/밀턴2.png" alt="밀턴2"></div>
+    <div class="tit13">밀턴 글레이저 ( 1929. 6. 26 - 2020. 6. 26 ) 는 미국에서 가장 유명한 그래픽 디자이너 중 한 명이다.</div>
+    <div class="tit14">그는 현대 미술관과 조르주 퐁피두 센터에서 1인 쇼의 구별을 받았다.</div>
+    <div class="tit15">그는 쿠퍼 휴잇 국립 디자인 박물관(2004)과 풀브라이트 협회(2011)의 평생 공로상에 선정되었으며, 2009년에는 국립</div>
+    <div class="tit16">예술 메달 상을 받은 최초의 그래픽 디자이너였다. 풀브라이트 학자로서, 글레이저는 볼로냐에서</div>
+    <div class="tit17">화가 조르지오 모란디와 함께 공부했으며, 디자인의 윤리적 실천에 대한 명확한 대변인이다.</div>
+    <div class="tit18">그는 1974년에 Milton Glaser, Inc.를 열었고, 오늘날까지 많은 디자인 분야에서 많은 양의 작업을 계속하고 있다.</div>
+    <div class="box4"><img src="img/1954.png" alt="1954"></div>
+    <div class="box5"><img src="img/1968.png" alt="1968"></div>
+    <div class="box6"><img src="img/1974.png" alt="1974"></div>
+    <div class="box7"><img src="img/1983.png" alt="1983"></div>
+    <div class="box8"><img src="img/아이러브뉴욕 로고2.png" alt="로고 라인2"></div>
+    <div class="tit19">디자이너 소개</div>
+    <div class="tit20">♥작품</div>
+    <div class="tit21"><img src="img/아이러브뉴욕 로고2.png" alt="로고 라인2"></div>
+    <div class="tit22">가치관</div>
+    <div class="tit23">인터뷰 내용</div>
+    <div class="tit25">밀턴 글레이저의</div>
+    <div class="tit26">대표적인 작품</div>
+    <div class="box9"><img src="img/아이러브뉴욕 포스터.png" alt="아이러브뉴욕 포스터"></div>
+    <div class="box10"><img src="img/밀튼 회색 글씨.png" alt="밀튼 회색 글씨"></div>
+    <div class="box11"><img src="img/밥 딜런.png" alt="밥 딜런"></div>
+    <div class="box12"><img src="img/뉴욕 매거진.png" alt="뉴욕 매거진"></div>
+    <div class="box13"><img src="img/가르시아.png" alt="가르시아"></div>
+    <div class="box14"><img src="img/반 고흐.png" alt="반 고흐"></div>
+    <div class="box15"><img src="img/아이러브뉴욕 로고2.png" alt="로고 라인2"></div>
+    <div class="tit27">디자이너 소개</div>
+    <div class="tit28">작품</div>
+    <div class="tit29"><img src="img/아이러브뉴욕 로고2.png" alt="로고 라인2"></div>
+    <div class="tit30">♥가치관</div>
+    <div class="tit31">인터뷰 내용</div>
+    <div class="tit33">밀턴 글레이저의</div>
+    <div class="tit34">가치관</div>
+    <div class="tit35"><img src="img/가치관1.png" alt="가치관1"></div>
+    <div class="tit36"><img src="img/가치관2.png" alt="가치관2"></div>
+    <div class="tit37"><img src="img/가치관3.png" alt="가치관3"></div>
+    <div class="tit38"><img src="img/가치관 회색 배경.png" alt="가치관 회색 배경"></div>
+    <div class="tit39"><img src="img/아이러브뉴욕 로고2.png" alt="로고 라인2"></div>
+    <div class="tit40">디자이너 소개</div>
+    <div class="tit41">작품</div>
+    <div class="tit42"><img src="img/아이러브뉴욕 로고2.png" alt="로고 라인2"></div>
+    <div class="tit43">가치관</div>
+    <div class="tit44">♥인터뷰 내용</div>
+    <div class="tit45"><img src="img/밀튼 인터뷰.png" alt="밀튼 인터뷰"></div>
+    <div class="tit46">밀튼 글레이저의</div>
+    <div class="tit47">인터뷰 내용</div>
+    <div class="tit48"><img src="img/인터뷰 내용.png" alt="밀튼 인터뷰 내용"></div>
+    <div class="tit49"><img src="img/인터뷰 출처.png" alt="인터뷰 출처"></div>
+    <div class="tit50"><img src="img/아이러브뉴욕 로고2.png" alt="로고 라인2"></div>
+
+
+</html>
